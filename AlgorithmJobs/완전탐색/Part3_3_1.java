@@ -22,7 +22,7 @@ public class Part3_3_1 {
 		}
 		
 		// 가장 자리에 특정 값을 넣는다.
-		
+		// 각 수는 0 에서 9 사이 수니까 ... 10으로 값을 설정해도 되지 않을까???? 
 		for(i=0;i<=6;i++) {
 			arr[0][i]=10;
 			arr[6][i]=10;
@@ -39,9 +39,17 @@ public class Part3_3_1 {
 				   arr[i+1][j]>arr[i][j]&&
 				   arr[i][j-1]>arr[i][j]&&
 				   arr[i][j+1]>arr[i][j])
+				{
 					System.out.print("*");
-				else
+					System.out.print(" ");
+				}
+				
+					
+				else {
 					System.out.print(arr[i][j]);
+					System.out.print(" ");
+				}
+					
 				
 			}
 			System.out.println();
