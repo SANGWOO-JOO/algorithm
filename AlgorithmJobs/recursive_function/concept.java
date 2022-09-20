@@ -16,6 +16,8 @@ public class concept {
 		// x번째 for문을 돌려야 함 
 		if(x>=r) {
 			System.out.print(result);
+			//base case에 return을 추가 
+			
 		}
 		else {
 			for(int i=0;i<n;i++) {
@@ -27,10 +29,11 @@ public class concept {
 					getResult(x+1);
 					//x번째에 i를 놓는 모든 경우를 이미 다 고려했음
 					check[i]=false;
-					result[x]=0;
+					result[x]=0; 	
 				}
 			}
 		}
+		return;
 	}
 	
 	public static void main(String[] args) {
@@ -43,7 +46,6 @@ public class concept {
 		// 0번째 for문으로 부터 돌린다.
 		getResult(0);
 		
+		return ;
 	}
-	
-
 }
