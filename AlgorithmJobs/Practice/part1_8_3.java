@@ -9,15 +9,16 @@ public class part1_8_3 {
 	    int flag=0;
 	    
 	    Scanner sc = new Scanner(System.in);
-	    int a = sc.nextInt();
-	    int b = sc.nextInt();
+	    int p = sc.nextInt();
+	    int q = sc.nextInt();
 	    
-	    for(int i=1;i<a;i++){
-	      if(a%i==0){
+	    for(int i=1;i<p;i++){
+	      if(p%i==0){
 	        cnt++;
-	        flag =1;
-	        if(cnt==b){
+	        
+	        if(cnt==q){
 	          System.out.print(i);
+	          flag =1;
 	        }
 	      }
 	    }
