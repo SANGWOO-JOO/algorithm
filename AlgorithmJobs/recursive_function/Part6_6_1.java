@@ -7,6 +7,7 @@ package recursive_function;
  * 결과를 내림차순으로 출력한다.
  */
 
+
 import java.util.Scanner;
 
 public class Part6_6_1 {
@@ -24,6 +25,10 @@ public class Part6_6_1 {
 		}
 
 	private static void Tobin(int len, int num) {
+		/*
+		 * 
+		 */
+		
 		if(len>=n){
 		    if(num == k){
 		      for(int i=0; i<n; i++){
@@ -33,12 +38,13 @@ public class Part6_6_1 {
 		    else
 		      return;
 		  }
-		else{//len<n
+		    else{//len<n
 		    if(num >= k){
 		      for(int i=0; i<n; i++){
 		    	 System.out.print(arr[i]);
 		      }System.out.println();
 		    }
+		    
 		    else{//num<n
 		      arr[len]=1;
 		      //재귀함수
