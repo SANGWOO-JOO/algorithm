@@ -21,7 +21,7 @@ public class Part7_4_2_BinarySearch_나무자르기 {
 		listTree.sort(Comparator.naturalOrder()); //오름차순으로 정렬
 		
 		long first =0;
-		long last = 2000000000;
+		long last = 20000000000L;
 		long mid=0;
 		/*
 		 * 이진 탐색

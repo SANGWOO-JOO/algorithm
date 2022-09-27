@@ -18,17 +18,13 @@ public class Part6_6_1 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt();
-		k = sc.nextInt();
+		n = sc.nextInt(); // 자리 수 
+		k = sc.nextInt(); // 1이 출력되는 개수
 		Tobin(0,0);
 			
 		}
 
 	private static void Tobin(int len, int num) {
-		/*
-		 * 
-		 */
-		
 		if(len>=n){
 		    if(num == k){
 		      for(int i=0; i<n; i++){
@@ -39,21 +35,13 @@ public class Part6_6_1 {
 		      return;
 		  }
 		    else{//len<n
-		    if(num >= k){
-		      for(int i=0; i<n; i++){
-		    	 System.out.print(arr[i]);
-		      }System.out.println();
-		    }
-		    
-		    else{//num<n
-		      arr[len]=1;
-		      //재귀함수
-		      Tobin(len+1, num+1);
-		      arr[len]=0;
-		      Tobin(len+1, num);
-		    }
+		    if(num <= k){
+		    	arr[len]=1;
+		    	Tobin(len+1, num+1);
+		    	arr[len]=0;
+		    	Tobin(len+1, num);
+		    }	 
 		  }
 				
 	}
-
 }

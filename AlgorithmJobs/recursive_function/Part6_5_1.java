@@ -3,6 +3,9 @@ package recursive_function;
 import java.util.Scanner;
 
 public class Part6_5_1 {
+	/*
+	 * n개 소문자 중에 r개만을 뽑아 나열
+	 */
 	static int n;
 	static int r; 
 	static Scanner sc = new Scanner(System.in );
@@ -12,8 +15,8 @@ public class Part6_5_1 {
 	static void getResult(int x) {
 		boolean flag =false;
 		if(x>=r) {		
-			for(int i=0;i<r;i++) {
-				for(int j=0;j<r;j++) {
+			for(int i=0;i<r;i++) { // i
+				for(int j=0;j<r;j++) { // j 
 					if(i!=j && result[i]==result[j]) {
 						flag =true;
 					}
