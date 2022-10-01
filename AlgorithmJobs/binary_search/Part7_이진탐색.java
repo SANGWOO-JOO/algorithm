@@ -1,79 +1,90 @@
 package binary_search;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Part7_이진탐색 {
-	
-	static int n,q;
-	static int []arr= new int [100010];
-	static int []arr2=new int [100010];
-	
-	private static int binarySearch(int[] arr, int start, int end, int arr2) {
-		// TODO Auto-generated method stub
-		//전체 조건이 형성되지 않을때
-		if (start > end) 
-	        return -1;
-		// 이진 탐색으로 값 떨어질때 
-		else if(start==end) {
-				if(arr[start]==arr2)
-					return 1;
-				else
-					return -1;				
-			}
-		// 이진탐색
-		else {
-			
-			int mid =(start+end)/2;
-		
-			if(arr[mid]>arr2)
-				// 중간값이 찾고자 하는 값이 크다면 mid -1 전까지 재귀함수로 찾아본다.
-				  binarySearch(arr, start, mid-1, arr2);
-			else 
-				if(arr[mid]<arr2) 
-				// 중간값이 찾고자 하는 값이 작다면 mid -1 전까지 재귀함수로 찾아본다.
-				  binarySearch(arr, mid+1, end, arr2);
-			else
-				if(arr[mid]==start) 
-					return 1;
-				else 
-					return -1;
-		}	
-		return 0;
-	}
 
-	public static void main(String[] args) {
+	static int[] arr;
+	static int[] arr2;
+	static int n,q;
 	
-		Scanner sc = new Scanner(System.in);
+	static int value;
+	public static void main(String[] args) {
 		
-		n =sc.nextInt(); //전체 질문수 5 
-		q=sc.nextInt();  // 확인 해보고 싶은 자연수 3
 		
-		for(int i=0;i<n;i++) {
-			arr[i]=sc.nextInt(); //전체 질문수 :: 배열
+		
+		Scanner sc =new Scanner(System.in);
+		
+		n = sc.nextInt(); // 전체 배열 개수
+		q = sc.nextInt(); // 찾고자 하는 개수
+		
+		int arr [] =new int [n];
+		int arr2[] = new int [q];
+		
+		for(int i=0;i<n;i++) {			
+			arr[i]=sc.nextInt();			
 		}
-		
 		
 		for(int i=0;i<q;i++) {
-			arr2[i]=sc.nextInt(); //확인해 보고 싶은 자연수 :; 배열
+			arr2[i]=sc.nextInt();
+			
+			
+			int inx =binarySearch(arr, 0, n-1, arr2[i]);
+			
+			if(inx==-1) {
+				System.out.print("NO");
+				System.out.println();
+
+			}
+			else {
+				System.out.print("YES");
+				System.out.println();
+			}
+			
 		}
 		
 		
-		int inx = -1;
 		
-		for(int i = 0; i < q; i++ ){ // q만큼 돌려본다
+		
+		
+}
+	private static int binarySearch(int arr[], int mystart, int myend, int value) {
+		
+		int start, end;
+		int mid;
+		
+		if (arr[mystart] > value) {
+			return -1;
+		}
+		else if (arr[mystart] == value) {
+			return 1;
+		}
+		if (arr[myend] < value) {
+			return -1;
+		}
+		else if (arr[myend] == value) { 
+			return 1;
+		}
 
-			// 이진 탐색 메소드 
-			inx = binarySearch(arr, 0, n-1 , arr2[i]);
+		
+		start = mystart;
+		end = myend;
+		
+		while(start+1<end ) {
 			
-			if(inx == -1) { // 없다
-				System.out.print("NO");
-				System.out.println();
+			mid = (start + end )/2 ;
+			
+			if(arr[mid]==value)
+				return 1;
+			
+			else if(arr[mid]>value) {
+				end=mid;
 			}
-			else  { // 있다.
-				System.out.print("Yes");
-				System.out.println();
-			}
-		}		
+			
+			else {
+				start =mid;
+			}		
+		}
+		return -1;
 	}
 }
