@@ -16,8 +16,8 @@ public class Part7_숫자개수세기 {
 	 private static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	 
 	static int n ,q ;
-	static int data[] = new int[Max];
-	static int search[] = new int[Max];
+	static long[] data = new long[Max];
+	static long[] search = new long  [Max];
 
 	public static void main(String[] args) throws IOException {
 		
@@ -39,7 +39,7 @@ public class Part7_숫자개수세기 {
 			
 			search[i]=Integer.parseInt(st.nextToken());
 			
-			int front , rear;
+			long front , rear;
 			
 			front = startsearch(search[i]);
 			rear =  endsearch(search[i]);
@@ -57,7 +57,7 @@ public class Part7_숫자개수세기 {
 		
 	}
 
-	private static int startsearch(int value) {
+	private static long startsearch(int value) {
 		int start , end ;
 		//start는 항상 value보다 
 		
