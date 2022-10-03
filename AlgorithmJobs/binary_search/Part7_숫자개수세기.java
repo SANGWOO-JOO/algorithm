@@ -57,20 +57,20 @@ public class Part7_숫자개수세기 {
 		
 	}
 
-	private static long startsearch(int value) {
+	private static long startsearch(long search2) {
 		int start , end ;
 		//start는 항상 value보다 
 		
-		if (data[0] < value)
+		if (data[0] < search2)
 		    start = 0 ;
 		else {
-		if (data[0] > value)
+		if (data[0] > search2)
 			return -1; // 없다는 의미 
 		else 
 			return 0; //첫번째 인덱스 반환
 		}
 
-		if (data[n - 1] >= value) 
+		if (data[n - 1] >= search2) 
 			end = n - 1;
 		else {
 			return -1;
@@ -82,32 +82,32 @@ public class Part7_숫자개수세기 {
 		while (start + 1 < end) {   //start ,end가 붙어있지 않다면 	
 			int mid = (start + end) / 2;
 
-			if (data[mid] < value)
+			if (data[mid] < search2)
 				start = mid;
 			else 
 				end = mid;
 		}
 
-		if (data[end] == value)
+		if (data[end] == search2)
 			return end;
 		else
 			return -1;
 	}
 	
-	private static int endsearch(int value) {
+	private static int endsearch(long search2) {
 		int start, end;
 		// start는 value보다 항상 작거나 같은 값을 가리켜야 한다
 		//end는 value 보다 크거나 같은 값을 가리킨다 
 
-		if (data[0] <=value) 
+		if (data[0] <=search2) 
 			start = 0;
 		else
 			return -1;
 
-		if (data[n - 1] > value)
+		if (data[n - 1] > search2)
 			end = n - 1;
 		else {
-			if (data[n - 1] < value)
+			if (data[n - 1] < search2)
 				return -1;
 			else 
 				return n - 1;
@@ -116,13 +116,13 @@ public class Part7_숫자개수세기 {
 		while (start + 1 < end) {
 			int mid = (start + end) / 2;
 
-			if (data[mid] <= value) 
+			if (data[mid] <= search2) 
 				start = mid;
 			else 
 				end = mid;
 		}
 
-		if (data[start] == value)
+		if (data[start] == search2)
 			return start;
 		else
 			return -1;
