@@ -3,14 +3,14 @@ package Part8_자료구조_Stack_Queue;
 import java.util.Scanner;
 
 public class stack_스택개념 {
-	private int [] arr ;
-	private int capacity =0;
-	private int len;
+	static int [] arr =new int [100];
+	
+	private static int top=-1;
 	static int n; //크기가 n인 스택
 	static int m; // m개의 연산
 	
-	static int a,b,c;
-	public stack_스택개념(int stackSize) {
+	static int a,b;
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		n =sc.nextInt();
 		m =sc.nextInt();
@@ -23,41 +23,40 @@ public class stack_스택개념 {
 				push(b);
 			}
 			else if(a==2) {
-				pop(a);
+				pop();
 			}
-			else if(a==3) {
+			else{
 				top();
-			}
-			
-		  
+			}			  
 		}
 		
 	}
+
 	
-private void push(int p) {
-	if(capacity<=arr.length) { // 저장공간보다 len이 더 크다면?? 
+private static void push(int p) {
+	if(n ==top+1) { // 저장공간보다 len이 더 크다면?? 
 		System.out.println("overflow");
+		
 	}
 	else {
-		arr[len++]=p;	
+		arr[++top]=p;	
 	}	
 }
 
-private void pop(int y) {
-	if(arr.length<=0) {
+private static void pop() {
+	if(top<0) {
 		System.out.println("underflow");
 	}
 	else {
-		arr[len-1]=0;
-		len--;
+		top--;
 	}
 }
-private int top() {
-	if(arr.length<=0){
-		return -1;
+private static void top() {
+	if(top<0){
+		System.out.println("NULL");
 	}
 	else {
-		return arr[len-1];
+		System.out.println(arr[top]);
 	}
 }
 
