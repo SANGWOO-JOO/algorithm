@@ -14,7 +14,7 @@ public class BFS_code {
 
             if(!visited.contains(node)){
                 visited.add(node);
-                needVisted.add(graph.get(node));
+//                needVisted.add(graph.get(node));
 
             }
         }
