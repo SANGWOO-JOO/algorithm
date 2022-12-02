@@ -15,15 +15,13 @@ public class two {
 
         StringBuffer first = new StringBuffer();
 
-
         for(int i=0; i<pArray.length; i++){
 
             int findIdx = sb.indexOf(pArray[i]+"");   //s 문자열에서 pArray 알파벳이 존재하는 인덱스 반환
 
             first.append(sb.substring(0,findIdx));
-
-            sb = new StringBuffer(sb.substring(findIdx+1));
-
+//            sb = new StringBuffer(sb.substring(findIdx+1));
+            sb.delete(0,findIdx+1);
         }
 
         System.out.println(first.append(sb));
