@@ -17,7 +17,18 @@ public class Main
         {
             stringBuilder.append(list.get(i));
         }
+
+
         System.out.println(stringBuilder);
+
+
+        for (int i = 0; i < list.size(); i++)
+        {
+            stringBuilder.delete(0, 6);
+        }
+
+        System.out.println(stringBuilder);
+
     }
 
 }
