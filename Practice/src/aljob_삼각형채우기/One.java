@@ -40,7 +40,7 @@ public class One {
                 if (arr[row + 1][col + 1] == 0) {
                     arr[row + 1][col + 1] = arr[row][col] - arr[row + 1][col];      //arr[row][col]의 바로 대각선 아래 값을 채운다.
                 }
-                
+
                 //3. 각 column당 row가 끝에 도달하고 column의 바로 아래와 대각선 아래 값이 0인 경우가 존재한다면
                 if (col == row && list.size() != 0) {
                     col = list.get(0) - 1;                //list에 저장된 첫번째 column 인덱스 조회후 대입   ..column이 다음 차례에 1증가해 버리기 때문에 -1을 해주어야 한다...
