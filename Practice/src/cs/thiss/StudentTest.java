@@ -18,9 +18,11 @@ class Student {
 
 public class StudentTest {
     public static void main(String[] args) {
+
         Student studentPark = new Student();
 
         studentPark.setStudentID(17);
         studentPark.setStudentName("스티브");
+
     }
 }

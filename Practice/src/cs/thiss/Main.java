@@ -3,12 +3,12 @@ package cs.thiss;
 
 class FiledA{
 
-    int m;
-    int n;
+    int a;
+    int b;
 
     void init(int m, int n){
-        m=m;
-        n=n;
+        a=m;
+        b=n;
     }
 }
 
@@ -28,8 +28,8 @@ public class Main {
         FiledB filedB = new FiledB();
 
         filedA.init(2,3 );
-        System.out.println(filedA.m); // 지역 변수에 다시 지역 변수값을 다시 대입하는 형태
-        System.out.println(filedA.n);
+        System.out.println(filedA.a); // 지역 변수에 다시 지역 변수값을 다시 대입하는 형태
+        System.out.println(filedA.b);
 
         filedB.init(2,3 );
         System.out.println(filedB.m); // 지역 변수의 값을 필드 m,n에 대입하는 형태
