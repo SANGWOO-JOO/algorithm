@@ -12,6 +12,7 @@ public class list {
         System.out.println(index);
 
         index = colors.indexOf("Red");
+        colors.clear();
         System.out.println(index);
     }
 }
