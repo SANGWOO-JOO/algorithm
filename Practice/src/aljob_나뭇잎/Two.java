@@ -30,8 +30,6 @@ public class Two {
                 }
             }
         }
-
-
         System.out.println(arr[0][m-1]);
     }
 
@@ -48,7 +46,7 @@ public class Two {
                 int y=w[0]+dy[k]; //세로 증감
                 int x=w[1]+dx[k]; //가로 증감
 
-                if(y>=0&&y<n&&x>=0&&x<m) {
+                if(y>=0&&y<n&& x>=0&&x<m) {
                     if(arr[y][x]!=0&&!isvisited[y][x]) {
                         queue.add(new int [] {y,x});
                         isvisited[y][x]=true;
