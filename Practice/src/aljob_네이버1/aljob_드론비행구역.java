@@ -1,6 +1,4 @@
 package aljob_네이버1;
-
-
 import java.util.Scanner;
 public class aljob_드론비행구역{
 
