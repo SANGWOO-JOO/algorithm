@@ -29,12 +29,13 @@ public class aljob_드론비행구역{
             }
 
             for(int j=i+1; j<n; j++){     //j는 i+1부터 n-1까지 반복하면서
+
                 if(height[maxIdx] >= height[j]){   //마지막 수는 비교 안하므로 에러날 일이 없음..
                     flag = true;        //앞의 수보다 작거나 같은 수가 있는지 확인
                     break;
                 }
+//                System.out.println( "i 인덱스 값은 " + i + " , j 값 은 " + height[j] + " 는 " + flag + " 그리고 " + cnt);
             }
-
 
             if(flag==true){   //앞의 수보다 작거나 같은 수가 있다면
                 cnt++;    //드론 비행 가능 구역 건물 수 카운트
@@ -44,11 +45,7 @@ public class aljob_드론비행구역{
                 //System.out.println(height[i] + "일떄 cnt는 " + cnt);
                 break;
             }
-
-
         }
-
         System.out.println(cnt);  //드론 비행 가능 구역 건물 수 출력
     }
-
 }
