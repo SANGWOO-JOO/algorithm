@@ -8,7 +8,6 @@ public class search {
 
         Scanner scan =new Scanner(System.in);
         int a ;
-
         a = scan.nextInt();
 
         int b[] =new int[a];
@@ -23,16 +22,12 @@ public class search {
         for(int i=0;i<a;i++){
 
             sum =0;
-
             for(int j=i;j<a;j++){
-
                 sum+=b[j];
-                if(sum==0)cnt++;
-               System.out.println(cnt);
+                if(sum==0) cnt++;
+               System.out.println( i + " " +j + " " +cnt);
             }
             System.out.println("-----");
         }
-
-
     }
 }
