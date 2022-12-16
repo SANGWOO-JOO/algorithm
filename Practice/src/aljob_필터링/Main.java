@@ -11,29 +11,31 @@ import java.util.Scanner;
 
 public class Main {
 
-//    public static void main(String[] args) {
-//
-//        Scanner scan = new Scanner(System.in);
-//
-//        int s = 0,p=0,t;
-//
-//
-//        String input = scan.nextLine();
-//        int length = input.length();
-//
-//        int arrt [] = new int[5];
-//
-//
-//        for(int i=0; i<)
-//
-//
-//
-//
-//
-//
-//    }
+    public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
 
+        String s = scan.nextLine();//문자열 s 입력
 
+        StringBuffer sb = new StringBuffer(s);
+
+        String p = scan.nextLine();   //문자열 p 입력
+        char[] pArray = p.toCharArray();
+
+        StringBuffer first = new StringBuffer();
+
+        for(int i=0; i<pArray.length; i++){ // pArray 배열 길이 만큼 돌아야한다. //par. 삭제하는 문자만큼 돌아야한다
+            int findIdx = sb.indexOf(pArray[i] +"");   //s 문자열에서 pArray 알파벳이 존재하는 인덱스 반환  // pArray[i] => 이 값에 대한 인덱스를 변수에 넣음 (특정 문자 위치 찾기)
+
+            System.out.println("findIdx= " + findIdx);
+
+                first.append(sb.substring(0,findIdx)); //findIdx -1 인덱스 번지까지 붙인다.
+//            sb = new StringBuffer(sb.substring(findIdx+1));
+            sb.delete(0,findIdx+1); ////findIdx  인덱스 번지까지 삭제.
+        }
+
+        System.out.println(first.append(sb));
+    }
 
 }
+
