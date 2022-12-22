@@ -13,13 +13,14 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             arr[i] = scan.nextInt(); // 한줄식 넣기
+
+
         }
 
 //        System.out.println("입력 값= " + arr[0] );
 //        System.out.println("입력 값= " + arr[1] );
 //        System.out.println("입력 값= " + arr[2] );
 //        System.out.println("입력 값= " + arr[3] );
-
 
 
 
@@ -30,20 +31,6 @@ public class Main {
              */
 
 
-//        for(int i=0; i<n-1; i++){
-//            for(int j=1; i<n;j++){
-//
-//            }
-//        }
-
-//        if(arr[0]>arr[1]) arr[0]--;
-
-//        System.out.println("입력 값= " + arr[0]);
-//        System.out.println("입력 값= " + arr[1]);
-//        System.out.println("입력 값= " + arr[2]);
-//        System.out.println("입력 값= " + arr[3]);
-
-//        System.out.println(cnt);
 
         int cnt = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -61,10 +48,6 @@ public class Main {
             }
         }
 
-//        for(int i=0;i<4;i++){
-//            System.out.println(arr[i]);
-//        }
-//        System.out.println("----");
         System.out.println(cnt);
     }
 }
