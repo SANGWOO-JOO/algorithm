@@ -4,50 +4,40 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        long start = System.currentTimeMillis(); //프로그램 시작 시간
         Scanner scan = new Scanner(System.in);
 
         int n = scan.nextInt();
 
         int[] arr = new int[n]; // 배열 길이 정하기
 
+        int max = 0 ; // max 값을 설정
+
         for (int i = 0; i < n; i++) {
+
             arr[i] = scan.nextInt(); // 한줄식 넣기
 
+            if(max <= arr[i] ){
+                max = arr[i] ;
+            }
 
         }
 
-//        System.out.println("입력 값= " + arr[0] );
-//        System.out.println("입력 값= " + arr[1] );
-//        System.out.println("입력 값= " + arr[2] );
-//        System.out.println("입력 값= " + arr[3] );
-
-
-
-          /*
-           1.  arr[0]과 arr[1]을 비교 arr[0] > arr[1] 이면 arr[0] -1 을 한다.
-           2.  arr[0] == arr[5]이 되면 나온다.
-           3.  그리고 cnt 카운트
-             */
-
-
-
         int cnt = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i= n-2; -1 < i ; i--) { // 뒤에서 2번째를 i로 잡는다.
+            for(int j=0 ; j < max ;j ++){  // 최대값 만큼 줄여준다
 
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] >= arr[j]) { //오름차순
+                if(arr[i] >= arr[i+1]){
                     arr[i]--;
-                    cnt++;
-                    j --;
-//                    System.out.println("j의 인덱스" +j);
-                } else {
-                    continue;
+                    cnt ++;
                 }
-//                System.out.println("-----------");
             }
         }
 
         System.out.println(cnt);
+        long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
+        System.out.println("프로그램 실행시간 : " + (end - start)/1000.0 +"초"); //실행 시간 계산 및 출력
+
     }
+
 }
