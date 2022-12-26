@@ -10,7 +10,7 @@ public class One {
         abcefefabc  // 예제
         1. 처음 입력하는 값을 넣어준다
         2 abc a(처음) and c(끝) and e(처음) f(끝) 이렇게 처음 끝으로 되는 경우의 수를 구한다.
-        3 두에서
+        3 뒤에서 검사하는 식
 
      */
 
