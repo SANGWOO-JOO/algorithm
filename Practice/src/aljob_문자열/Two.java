@@ -21,11 +21,12 @@ public class Two {
 //       int a =sb.indexOf(p);
 //        System.out.println(a);
         int cnt=0;
-        for(int i=0; i<length; i++){
+//        for(int i=0; i<length; i++){
+//
+//            int a =sb.indexOf(p); // 인덱스의 값
+//            sb.delete(a, plength);
+//        }
 
-            int a =sb.indexOf(p); // 인덱스의 값
-            sb.delete(a, a+p.length());
 
-        }
     }
 }
