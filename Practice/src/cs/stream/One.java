@@ -6,7 +6,7 @@ public class One {
     public interface JavaCoding {
         void nowCoding();
     }
-    
+
     public static void main(String[] args) {
         //객체 선언
         JavaCoding jc;
