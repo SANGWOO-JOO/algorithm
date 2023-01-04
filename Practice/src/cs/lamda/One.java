@@ -1,6 +1,7 @@
 package cs.lamda;
 
 public class One {
+
 //    public static void main(String[] args) {
 //        int max(int a , int b) {
 //            return a > b ? a: b;
@@ -23,8 +24,8 @@ public class One {
 //    (String name , int i) -> {
 //        System.out.println(name+"="+i);
 //    }
-
-    (int a ,int b) -> {return a>b? a:b;} // OK
-    (int a ,int b) -> return a>b? a:b // OK
+//
+//    (int a ,int b) -> {return a>b? a:b;} // OK
+//    (int a ,int b) -> return a>b? a:b // OK
 
 }
